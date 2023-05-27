@@ -11,7 +11,7 @@ class Spot < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/umputun/spot/releases/download/v1.6.1/spot_v1.6.1_macos_x86_64.tar.gz"
-      sha256 "b027d45cd79a5752bfd1b56b05d27ee54718e8a18d34b9c76a20a9e94275b679"
+      sha256 "7b2fdc6cf2471c194cec82ba82af05092d0adf5571a75dfd006c46429abeba7d"
 
       def install
         bin.install "spot"
@@ -20,7 +20,7 @@ class Spot < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/umputun/spot/releases/download/v1.6.1/spot_v1.6.1_macos_arm64.tar.gz"
-      sha256 "a1fbb3fcdda09a935a4acea168a347f760e2e3da929cde7a01ff001d9761155f"
+      sha256 "1dc50bcca785d1e39dbf91e21f999957933d8da2a47fe58047964d5d08417d05"
 
       def install
         bin.install "spot"
@@ -32,7 +32,7 @@ class Spot < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/umputun/spot/releases/download/v1.6.1/spot_v1.6.1_linux_arm64.tar.gz"
-      sha256 "3275f5eb16a95767b20b1e05a6b67e2e87dd6f6a2b843d6f302e6d4f6726b11a"
+      sha256 "a7822f7f624a4b2b852d6d52058bdb6515067d123cff6a95d4290dd170de2065"
 
       def install
         bin.install "spot"
@@ -41,7 +41,7 @@ class Spot < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/umputun/spot/releases/download/v1.6.1/spot_v1.6.1_linux_x86_64.tar.gz"
-      sha256 "5c3e1a7b992669888dc8d97a0548cc2033ce9500deb03996fe42bf86ef807939"
+      sha256 "57fe4b971513db975cc8673fb2bc400e6de067fc226b306a99fe1950c3370f98"
 
       def install
         bin.install "spot"
@@ -50,7 +50,7 @@ class Spot < Formula
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/umputun/spot/releases/download/v1.6.1/spot_v1.6.1_linux_arm.tar.gz"
-      sha256 "9a956f61f751c6a9244841750a7699e6f203db42d55ef8848464602b9c164003"
+      sha256 "ab5674e26731ec467318af40149d51b3c272ae621c22f7e10fe63ff0c28b2a6b"
 
       def install
         bin.install "spot"
