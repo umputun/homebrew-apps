@@ -5,21 +5,21 @@
 class TgSpam < Formula
   desc "tg-spam is a self-hosted Telegram bot fighting spam like no tomorrow."
   homepage "https://tg-spam.umputun.dev"
-  version "1.3.0"
+  version "1.3.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/umputun/tg-spam/releases/download/v1.3.0/tg-spam_v1.3.0_macos_arm64.tar.gz"
-      sha256 "56c7e944501d15efc6335a063cf1ed295a43c4b3ea46aa7b694b02f9e612256a"
+    if Hardware::CPU.intel?
+      url "https://github.com/umputun/tg-spam/releases/download/v1.3.1/tg-spam_v1.3.1_macos_x86_64.tar.gz"
+      sha256 "8f0e1ee4e00a604574a22bd8dd45038be73d1b3ee0510c89ecab1633e9672d5e"
 
       def install
         bin.install "tg-spam"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/umputun/tg-spam/releases/download/v1.3.0/tg-spam_v1.3.0_macos_x86_64.tar.gz"
-      sha256 "3ac1e3bfaf31a010b9f70b666ada2a0bac7163e60162e76d22091a009d0a1cc2"
+    if Hardware::CPU.arm?
+      url "https://github.com/umputun/tg-spam/releases/download/v1.3.1/tg-spam_v1.3.1_macos_arm64.tar.gz"
+      sha256 "f5577625a38f9c19080c735619085aef4b9db14a6922ed1110cfadbe53f1ffb7"
 
       def install
         bin.install "tg-spam"
@@ -29,24 +29,24 @@ class TgSpam < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/tg-spam/releases/download/v1.3.0/tg-spam_v1.3.0_linux_arm.tar.gz"
-      sha256 "51162c350fc2177c6a38c16ba561067d9582a93e59f532fcce1485dd915e52dc"
-
-      def install
-        bin.install "tg-spam"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/umputun/tg-spam/releases/download/v1.3.0/tg-spam_v1.3.0_linux_x86_64.tar.gz"
-      sha256 "18f720c5ee2d2dab39b89940e1af16a7c1942b9b0f9b31f9aa95abaf0ea13290"
+      url "https://github.com/umputun/tg-spam/releases/download/v1.3.1/tg-spam_v1.3.1_linux_arm.tar.gz"
+      sha256 "2509180bbfc648b6ff6879937ce1d660e8e2bdef5dce0a0da794237fe27d437f"
 
       def install
         bin.install "tg-spam"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/tg-spam/releases/download/v1.3.0/tg-spam_v1.3.0_linux_arm64.tar.gz"
-      sha256 "19876a89230d008b68842f6efe480925e60b8e6ef4c2b3f9afb606f040324912"
+      url "https://github.com/umputun/tg-spam/releases/download/v1.3.1/tg-spam_v1.3.1_linux_arm64.tar.gz"
+      sha256 "88ad56bc4ff1edff9bb7fbe1dd7373bb3c5048b8c318328fa52935e6ea68ef48"
+
+      def install
+        bin.install "tg-spam"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/umputun/tg-spam/releases/download/v1.3.1/tg-spam_v1.3.1_linux_x86_64.tar.gz"
+      sha256 "66ac6610188e2337d4706479f66fdef96592a6908220833b3ac7db70cb39ecc4"
 
       def install
         bin.install "tg-spam"
