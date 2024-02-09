@@ -5,21 +5,21 @@
 class ProxyCron < Formula
   desc "proxy-cron is a simple HTTP proxy server designed to handle requests based on crontab-like scheduling."
   homepage "https://proxy-cron.umputun.dev/"
-  version "0.1.3"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/umputun/proxy-cron/releases/download/v0.1.3/proxy-cron_v0.1.3_macos_arm64.tar.gz"
-      sha256 "ce680f4593c384af631a07db1da1adb05ea5ec6058c59f0e0bf0e4c152b85ece"
+    if Hardware::CPU.intel?
+      url "https://github.com/umputun/proxy-cron/releases/download/v0.2.0/proxy-cron_v0.2.0_macos_x86_64.tar.gz"
+      sha256 "1111c49c5fc3c641dabeefd4cb8afc5aecf9621edb0c646f905b4dd3c1fde865"
 
       def install
         bin.install "proxy-cron"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/umputun/proxy-cron/releases/download/v0.1.3/proxy-cron_v0.1.3_macos_x86_64.tar.gz"
-      sha256 "10941209ae9c2e7d1756ee82a2a634ad11a9ae9a4c9828c888a76342a228239b"
+    if Hardware::CPU.arm?
+      url "https://github.com/umputun/proxy-cron/releases/download/v0.2.0/proxy-cron_v0.2.0_macos_arm64.tar.gz"
+      sha256 "e834ecaa6ed535d5343aaf1c97261c8f4840e1e4a3e5b780db8810467883b0c2"
 
       def install
         bin.install "proxy-cron"
@@ -28,25 +28,25 @@ class ProxyCron < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/proxy-cron/releases/download/v0.1.3/proxy-cron_v0.1.3_linux_arm64.tar.gz"
-      sha256 "70f4d7a5c6e4fc3069a20be9b8fb579d690c88783d52ad4e84cc2dc5dae042f6"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/umputun/proxy-cron/releases/download/v0.2.0/proxy-cron_v0.2.0_linux_arm.tar.gz"
+      sha256 "153fb8f7da0690ec2d4e5e9cb3d618b9a0ea49c3d003b73c5de05ba15f21ee1b"
 
       def install
         bin.install "proxy-cron"
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/proxy-cron/releases/download/v0.1.3/proxy-cron_v0.1.3_linux_arm.tar.gz"
-      sha256 "185d47342d1e071b1724780cb3adbb5fcafde9d94f90a237188cf06c360dd667"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/umputun/proxy-cron/releases/download/v0.2.0/proxy-cron_v0.2.0_linux_arm64.tar.gz"
+      sha256 "060301db2654096670e1ecb2661d1201a80366cb1d38466ecaf09814ab8835b5"
 
       def install
         bin.install "proxy-cron"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/proxy-cron/releases/download/v0.1.3/proxy-cron_v0.1.3_linux_x86_64.tar.gz"
-      sha256 "14a5f70618c8b6bbdf5719ba785f5fca09d2d3e85be67c9c020c0bf070284099"
+      url "https://github.com/umputun/proxy-cron/releases/download/v0.2.0/proxy-cron_v0.2.0_linux_x86_64.tar.gz"
+      sha256 "ed605addd5dc262fe37777f1f180554eab5de16a8a97e434fd3530bc518520d6"
 
       def install
         bin.install "proxy-cron"
