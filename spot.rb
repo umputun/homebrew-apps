@@ -5,13 +5,13 @@
 class Spot < Formula
   desc "Spot (aka simplotask) is a powerful and easy-to-use tool for effortless deployment and configuration management."
   homepage "https://simplotask.com/"
-  version "1.15.0"
+  version "1.15.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/spot/releases/download/v1.15.0/spot_v1.15.0_macos_x86_64.tar.gz"
-      sha256 "84484f7076b63d80c046ce16c67bee6db923a3e09986d04033926b57e8556eb0"
+      url "https://github.com/umputun/spot/releases/download/v1.15.1/spot_v1.15.1_macos_x86_64.tar.gz"
+      sha256 "528e5d3217e305628998c8a487845ba015ce0d30bfc2dff8d7df02bfd2f7c172"
 
       def install
         bin.install "spot"
@@ -19,8 +19,8 @@ class Spot < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/umputun/spot/releases/download/v1.15.0/spot_v1.15.0_macos_arm64.tar.gz"
-      sha256 "6f7bdc982d078b26b562b18a6b46756f62d3ecc8f603c844fff214affa4d0811"
+      url "https://github.com/umputun/spot/releases/download/v1.15.1/spot_v1.15.1_macos_arm64.tar.gz"
+      sha256 "40d6758e67563d9ef3e019e0fe89c0203ac3f6bc0c346ea42798a0028de0e724"
 
       def install
         bin.install "spot"
@@ -31,8 +31,8 @@ class Spot < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/spot/releases/download/v1.15.0/spot_v1.15.0_linux_x86_64.tar.gz"
-      sha256 "38c70bb80a6044dda78f6897ab2fe8ff988aa56cdce2bbbaa75ad071d5541c42"
+      url "https://github.com/umputun/spot/releases/download/v1.15.1/spot_v1.15.1_linux_x86_64.tar.gz"
+      sha256 "46434b233aa90b8bc9729b30344ed8c546c7b138948ec64e0601dfd127749f1e"
 
       def install
         bin.install "spot"
@@ -40,8 +40,8 @@ class Spot < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/spot/releases/download/v1.15.0/spot_v1.15.0_linux_arm.tar.gz"
-      sha256 "b2de001e4a2ae4bd1d1f26e65c1b25e132b4bfe057e4f40fea85505b28ff6a5b"
+      url "https://github.com/umputun/spot/releases/download/v1.15.1/spot_v1.15.1_linux_arm.tar.gz"
+      sha256 "b318a13104192b7ab6a9467fd7af21fcc971defc7f94e0a098224d2113585b83"
 
       def install
         bin.install "spot"
@@ -49,8 +49,8 @@ class Spot < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/spot/releases/download/v1.15.0/spot_v1.15.0_linux_arm64.tar.gz"
-      sha256 "366aefd34f824e19a6801e4de1b693b82663561e8a2bb63bcf2c6b3e4ba218fd"
+      url "https://github.com/umputun/spot/releases/download/v1.15.1/spot_v1.15.1_linux_arm64.tar.gz"
+      sha256 "3b5da2833b120ff8811ba379461e4c70867de3c8931150b66e76f325c975830d"
 
       def install
         bin.install "spot"
