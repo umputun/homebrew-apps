@@ -5,21 +5,21 @@
 class UnfuckAiComments < Formula
   desc "unfuck-ai-comments is a tool that converts all comments inside Go functions to lowercase"
   homepage "https://unfuck-ai-comments.umputun.dev"
-  version "0.8.10"
+  version "0.9.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/unfuck-ai-comments/releases/download/v0.8.10/unfuck-ai-comments_v0.8.10_macos_x86_64.tar.gz"
-      sha256 "7bee603432f66f13452978d30d6dc91be31051aaf5aeda563bc1270a2c6529e8"
+      url "https://github.com/umputun/unfuck-ai-comments/releases/download/v0.9.0/unfuck-ai-comments_v0.9.0_macos_x86_64.tar.gz"
+      sha256 "19923159e1141b54db82badddb54278ee03c0bc9504eeeb404f1dd2e1f801240"
 
       def install
         bin.install "unfuck-ai-comments"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/umputun/unfuck-ai-comments/releases/download/v0.8.10/unfuck-ai-comments_v0.8.10_macos_arm64.tar.gz"
-      sha256 "d0c2b2a1f2e59bdd83c541af2a339133b2f88178e6502f8297184e60b047bd94"
+      url "https://github.com/umputun/unfuck-ai-comments/releases/download/v0.9.0/unfuck-ai-comments_v0.9.0_macos_arm64.tar.gz"
+      sha256 "b6305b6e71d4eff1b1a712a1ccfe2f026f33b3e8027a08ef797d29648146149d"
 
       def install
         bin.install "unfuck-ai-comments"
@@ -29,24 +29,24 @@ class UnfuckAiComments < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/unfuck-ai-comments/releases/download/v0.8.10/unfuck-ai-comments_v0.8.10_linux_x86_64.tar.gz"
-      sha256 "dc2ab4657d13ed83e1e5e0f64fdcec54db7fd8f6e26d3eba20d7cff62303261a"
+      url "https://github.com/umputun/unfuck-ai-comments/releases/download/v0.9.0/unfuck-ai-comments_v0.9.0_linux_x86_64.tar.gz"
+      sha256 "e82c69945ba6eb39c0886ab44bda7ce3bdfd326611a63a25aa0b2b254abb2dc3"
 
       def install
         bin.install "unfuck-ai-comments"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/unfuck-ai-comments/releases/download/v0.8.10/unfuck-ai-comments_v0.8.10_linux_arm.tar.gz"
-      sha256 "3aad47f66a86af66ab3f9533bab82cf19c4ac0f350e84386aad1d210f3081f86"
+      url "https://github.com/umputun/unfuck-ai-comments/releases/download/v0.9.0/unfuck-ai-comments_v0.9.0_linux_arm.tar.gz"
+      sha256 "de1c3fe8c190a6c5486d2a2f1a284243f03cc5c23f8d467d7f7ed644b27982dd"
 
       def install
         bin.install "unfuck-ai-comments"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/unfuck-ai-comments/releases/download/v0.8.10/unfuck-ai-comments_v0.8.10_linux_arm64.tar.gz"
-      sha256 "e2a15f88f61c4254932b385e37867af218e9e0c7eef8c27c3444b17870f81af7"
+      url "https://github.com/umputun/unfuck-ai-comments/releases/download/v0.9.0/unfuck-ai-comments_v0.9.0_linux_arm64.tar.gz"
+      sha256 "985fe69c4af8dbb73274cedefe85f712ab4b9ca867f6bb096e535f77235868c1"
 
       def install
         bin.install "unfuck-ai-comments"
