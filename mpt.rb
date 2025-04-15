@@ -5,21 +5,21 @@
 class Mpt < Formula
   desc "MPT is a command-line utility that sends prompts to multiple AI language model providers in parallel and combines the results"
   homepage "https://github.com/umputun/mpt"
-  version "0.3.2"
+  version "0.3.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/mpt/releases/download/v0.3.2/mpt_v0.3.2_macos_x86_64.tar.gz"
-      sha256 "90c1d70ff70c8fe8f2854dd2d8f4d13a580254017a73b9ad5f1fb3e16757d2ad"
+      url "https://github.com/umputun/mpt/releases/download/v0.3.3/mpt_v0.3.3_macos_x86_64.tar.gz"
+      sha256 "89c4e97c7841fc36696b34a598fbd88ab0d6238a0dd0b99fd2850f842b32e699"
 
       def install
         bin.install "mpt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/umputun/mpt/releases/download/v0.3.2/mpt_v0.3.2_macos_arm64.tar.gz"
-      sha256 "d4f980286bc682c92af14e2c47e846481e49ed95d426ffffadad0a6384b369e2"
+      url "https://github.com/umputun/mpt/releases/download/v0.3.3/mpt_v0.3.3_macos_arm64.tar.gz"
+      sha256 "35f6208479736b51ff654cb20d1489e37e927d0265fea3e9675d7a961d8c9a2c"
 
       def install
         bin.install "mpt"
@@ -29,24 +29,24 @@ class Mpt < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/mpt/releases/download/v0.3.2/mpt_v0.3.2_linux_x86_64.tar.gz"
-      sha256 "ceb5c9a6d0cb7e8df8473a3ce3d54bd8bf65a5291bb3f9a169127964d36cfbc6"
+      url "https://github.com/umputun/mpt/releases/download/v0.3.3/mpt_v0.3.3_linux_x86_64.tar.gz"
+      sha256 "1bfa00d788b894c3572102ae21c3059f305b9e380cecf2fab0c71d9e12a1f650"
 
       def install
         bin.install "mpt"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/mpt/releases/download/v0.3.2/mpt_v0.3.2_linux_arm.tar.gz"
-      sha256 "a746c90a1fbf0745a3c1f95ad02c32b14ea57b6ca3b504b38e7997f5d9ac685f"
+      url "https://github.com/umputun/mpt/releases/download/v0.3.3/mpt_v0.3.3_linux_arm.tar.gz"
+      sha256 "b4bc6faf683d4b6dc749ba73f07a0fb4a197caa0ffcce7a17907c70b89b3ba75"
 
       def install
         bin.install "mpt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/mpt/releases/download/v0.3.2/mpt_v0.3.2_linux_arm64.tar.gz"
-      sha256 "df63e973a99516bd54700920937c94e8053de249b0db995193db04796fd516b5"
+      url "https://github.com/umputun/mpt/releases/download/v0.3.3/mpt_v0.3.3_linux_arm64.tar.gz"
+      sha256 "7e531736fe72eeb6562fde6926a91ddca0f148940f4bc524a6e3c078e14d0051"
 
       def install
         bin.install "mpt"
