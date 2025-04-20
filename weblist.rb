@@ -5,21 +5,21 @@
 class Weblist < Formula
   desc "weblist is a self-hosted web service to access local files and folders"
   homepage "https://weblist.umputun.dev"
-  version "0.14.1"
+  version "0.14.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/weblist/releases/download/v0.14.1/weblist_v0.14.1_macos_x86_64.tar.gz"
-      sha256 "682a5b4333da041b774576e58fe050f317cfe0da1cf43d0c62e77e892fe1da99"
+      url "https://github.com/umputun/weblist/releases/download/v0.14.2/weblist_v0.14.2_macos_x86_64.tar.gz"
+      sha256 "7cf43b0b94d1c31ba3e106633589e1463a671fd2cfadc459646e4d362a02db36"
 
       def install
         bin.install "weblist"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/umputun/weblist/releases/download/v0.14.1/weblist_v0.14.1_macos_arm64.tar.gz"
-      sha256 "198307c8416cc51b9fd04f60598053e328e29ede214ea405a0618967dc67c3f1"
+      url "https://github.com/umputun/weblist/releases/download/v0.14.2/weblist_v0.14.2_macos_arm64.tar.gz"
+      sha256 "3f01ad7ea401dbaa92c6fab278f136942099aac7d03ca137c40226841f38e363"
 
       def install
         bin.install "weblist"
@@ -29,24 +29,24 @@ class Weblist < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/weblist/releases/download/v0.14.1/weblist_v0.14.1_linux_x86_64.tar.gz"
-      sha256 "c59ae096e79440aebc316457cec24bf97c251798242e8919396f6f3aad0961d8"
+      url "https://github.com/umputun/weblist/releases/download/v0.14.2/weblist_v0.14.2_linux_x86_64.tar.gz"
+      sha256 "e7c881e6033c5b56130b9c2e83173344676b00e72d757c5d7695ec619308cef3"
 
       def install
         bin.install "weblist"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/weblist/releases/download/v0.14.1/weblist_v0.14.1_linux_arm.tar.gz"
-      sha256 "79ad28368b475aae6cff04f5eb959cbf984abf5b464ac0adc1c8413aea0642bd"
+      url "https://github.com/umputun/weblist/releases/download/v0.14.2/weblist_v0.14.2_linux_arm.tar.gz"
+      sha256 "24d7c602a9549b62a1776e6fcc6418a8ad0b74951a1b7ffd4637a01def7ffc13"
 
       def install
         bin.install "weblist"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/weblist/releases/download/v0.14.1/weblist_v0.14.1_linux_arm64.tar.gz"
-      sha256 "faff25a2189b0c41ecf7bf081596ca55079af0a8628923116ac018745a75b3ca"
+      url "https://github.com/umputun/weblist/releases/download/v0.14.2/weblist_v0.14.2_linux_arm64.tar.gz"
+      sha256 "660d327ca11c7af6133debaeb14f6a68aece68eb2ab72ecf0a52292ced172981"
 
       def install
         bin.install "weblist"
