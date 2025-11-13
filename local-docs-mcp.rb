@@ -5,21 +5,21 @@
 class LocalDocsMcp < Formula
   desc "MCP server for local documentation access"
   homepage "https://github.com/umputun/local-docs-mcp"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/local-docs-mcp/releases/download/v0.1.0/local-docs-mcp_v0.1.0_macos_x86_64.tar.gz"
-      sha256 "2ffd5ad5209a289cd872b84996b055f318bd230c19d34ce5aca07451a64e6631"
+      url "https://github.com/umputun/local-docs-mcp/releases/download/v0.2.0/local-docs-mcp_v0.2.0_macos_x86_64.tar.gz"
+      sha256 "4ed7fd42092b4dff7caf78f350b55cdf5d7f5a4beaa243905b0051c9789dac01"
 
       def install
         bin.install "local-docs-mcp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/umputun/local-docs-mcp/releases/download/v0.1.0/local-docs-mcp_v0.1.0_macos_arm64.tar.gz"
-      sha256 "177bcc32ecff6117b673d05c3ccd2e1bfa26c81b07117557531844c70fd182c3"
+      url "https://github.com/umputun/local-docs-mcp/releases/download/v0.2.0/local-docs-mcp_v0.2.0_macos_arm64.tar.gz"
+      sha256 "58bda1ec9f8ae8a78af4d7b1995043bfeb1b41d79b6298e1e0f0f9b00c3acf59"
 
       def install
         bin.install "local-docs-mcp"
@@ -29,24 +29,24 @@ class LocalDocsMcp < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/local-docs-mcp/releases/download/v0.1.0/local-docs-mcp_v0.1.0_linux_x86_64.tar.gz"
-      sha256 "b7f9d2efe5ddf19219edf8babaf1cbff1a87ff08e28c2e59648a1aecb56b37e0"
+      url "https://github.com/umputun/local-docs-mcp/releases/download/v0.2.0/local-docs-mcp_v0.2.0_linux_x86_64.tar.gz"
+      sha256 "68181d6c3f661ebe7a31eeefe6d6951f26a6655f96326a11e1e4600063514c87"
 
       def install
         bin.install "local-docs-mcp"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/local-docs-mcp/releases/download/v0.1.0/local-docs-mcp_v0.1.0_linux_arm.tar.gz"
-      sha256 "fce895192262ceeebbc9e5885b7c396e3838d3f058e71f7a8bde24dd8b4f7da9"
+      url "https://github.com/umputun/local-docs-mcp/releases/download/v0.2.0/local-docs-mcp_v0.2.0_linux_arm.tar.gz"
+      sha256 "ff33ebc53b4d16a2f36f0dbd99fa947b3a169002b8030e534cafbbca2a0336e3"
 
       def install
         bin.install "local-docs-mcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/local-docs-mcp/releases/download/v0.1.0/local-docs-mcp_v0.1.0_linux_arm64.tar.gz"
-      sha256 "021fcea5ae4bffd15ab2fce3720f3b55da16a5a01ebdccf0eafa4d04acb5f4bf"
+      url "https://github.com/umputun/local-docs-mcp/releases/download/v0.2.0/local-docs-mcp_v0.2.0_linux_arm64.tar.gz"
+      sha256 "9fddebcf097e495810cf6981b4bf6834e9e3759571a165c293db5858e9ab6cdf"
 
       def install
         bin.install "local-docs-mcp"
