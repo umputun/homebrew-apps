@@ -5,21 +5,21 @@
 class Stash < Formula
   desc "Lightweight key-value configuration service for centralized config management"
   homepage "https://github.com/umputun/stash"
-  version "0.7.2"
+  version "0.7.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/stash/releases/download/v0.7.2/stash_v0.7.2_macos_x86_64.tar.gz"
-      sha256 "9bdb6239cdc58b6a0bed66a66f55d62a44561e233fe0ade0eb9d4bc672f15518"
+      url "https://github.com/umputun/stash/releases/download/v0.7.3/stash_v0.7.3_macos_x86_64.tar.gz"
+      sha256 "ee00281e05fe3bc89b5f3c0625e5809c7d705d393d38be756bb87b345d0fd105"
 
       def install
         bin.install "stash"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/umputun/stash/releases/download/v0.7.2/stash_v0.7.2_macos_arm64.tar.gz"
-      sha256 "5beaaa67273a05bc71fd3e116bcf6f74338ac4e3f1c7cbdc5b827394d0358243"
+      url "https://github.com/umputun/stash/releases/download/v0.7.3/stash_v0.7.3_macos_arm64.tar.gz"
+      sha256 "58c5de4a73645a560a4ebb96e157d211822ab529f126d2f0bccb7a4338897822"
 
       def install
         bin.install "stash"
@@ -29,24 +29,24 @@ class Stash < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/stash/releases/download/v0.7.2/stash_v0.7.2_linux_x86_64.tar.gz"
-      sha256 "aa32bfa47f64e37e412f4abdfd0ea71b5349aca62c59a6d77471c968bc44eff3"
+      url "https://github.com/umputun/stash/releases/download/v0.7.3/stash_v0.7.3_linux_x86_64.tar.gz"
+      sha256 "f7316ed480c4720f5cc97b0adcf2def62645947810fc80943b309ea91d71de86"
 
       def install
         bin.install "stash"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/stash/releases/download/v0.7.2/stash_v0.7.2_linux_arm.tar.gz"
-      sha256 "cf5cac336979d64e136117495523239734ce47954cd19f09b06cf7c3994f217a"
+      url "https://github.com/umputun/stash/releases/download/v0.7.3/stash_v0.7.3_linux_arm.tar.gz"
+      sha256 "9fd7bc8bd21f7c23665ecf1282b7e43b3d62f3d3860e8d30f98ae98eff6a9a1f"
 
       def install
         bin.install "stash"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/stash/releases/download/v0.7.2/stash_v0.7.2_linux_arm64.tar.gz"
-      sha256 "7b264e4ddac84c62c6bdb0a18ca5def380369c26361b96af473113da72541ccc"
+      url "https://github.com/umputun/stash/releases/download/v0.7.3/stash_v0.7.3_linux_arm64.tar.gz"
+      sha256 "94e8c07eb6338039782e112c9eea53340616d9f95b4d09f511f2c7931e944c3c"
 
       def install
         bin.install "stash"
