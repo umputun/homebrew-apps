@@ -11,7 +11,7 @@ class Secrets < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/umputun/secrets/releases/download/v1.8.1/secrets_v1.8.1_macos_x86_64.tar.gz"
-      sha256 "5262f0e7c5c3275519b8addaf181df9e8d9bd593ecd3e6254152c77ca907eade"
+      sha256 "9d7946e01f9716571fbd3d5bc3d1d37199312ac29c0cda0cf8737a87d59b8a08"
 
       def install
         bin.install "secrets"
@@ -19,7 +19,7 @@ class Secrets < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/umputun/secrets/releases/download/v1.8.1/secrets_v1.8.1_macos_arm64.tar.gz"
-      sha256 "0704e73c3188055f6b3236be4669fc614126de9be546bddbccfe79359c9fe604"
+      sha256 "1f9234ef99f2a448b4087e3e0ccf081e9a20319dd0fd04dcf2620338f0168f90"
 
       def install
         bin.install "secrets"
@@ -30,7 +30,7 @@ class Secrets < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/umputun/secrets/releases/download/v1.8.1/secrets_v1.8.1_linux_x86_64.tar.gz"
-      sha256 "451fc480773b0c1e3de866bdd9472b064641ec494354e5e13b9d884d251221ad"
+      sha256 "89bc1f2529adcbc8e80056406e90579c761a09087d3ef86376aeb4db56ab7762"
 
       def install
         bin.install "secrets"
@@ -38,7 +38,7 @@ class Secrets < Formula
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/umputun/secrets/releases/download/v1.8.1/secrets_v1.8.1_linux_arm.tar.gz"
-      sha256 "c79ac1ed4f87510dfab64424abc364a18b74d565ccc9a03c8c12d01c4287445c"
+      sha256 "e5b920dc9bc2a7cebd5d5a68624fcd563c0b0ffdd2b755a865ba5359db89fd89"
 
       def install
         bin.install "secrets"
@@ -46,7 +46,7 @@ class Secrets < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/umputun/secrets/releases/download/v1.8.1/secrets_v1.8.1_linux_arm64.tar.gz"
-      sha256 "a4b96b632bf50d595bfbe53390067a9905ac86e38c6d554856e01563e71285bb"
+      sha256 "412a88905b2ba70b739fc694c7df3a0911d1d58818a9911141ca434c6addb243"
 
       def install
         bin.install "secrets"
