@@ -5,21 +5,21 @@
 class Secrets < Formula
   desc "Self-hosted service for sharing encrypted secrets with one-time access"
   homepage "https://github.com/umputun/secrets"
-  version "1.9.2"
+  version "1.9.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/secrets/releases/download/v1.9.2/secrets_v1.9.2_macos_x86_64.tar.gz"
-      sha256 "d413028ed2836d1a6f50f803ee9517ddee56d4bbecbd90f6c57dd52626d25137"
+      url "https://github.com/umputun/secrets/releases/download/v1.9.3/secrets_v1.9.3_macos_x86_64.tar.gz"
+      sha256 "684e1901a97acf52c8473af260a4c7856d48ab8c8e9a75bbcfd25592245d3a86"
 
       def install
         bin.install "secrets"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/umputun/secrets/releases/download/v1.9.2/secrets_v1.9.2_macos_arm64.tar.gz"
-      sha256 "077849395d580f7a033494b94ce53079302bca7757e93729c6c88d21e99c3816"
+      url "https://github.com/umputun/secrets/releases/download/v1.9.3/secrets_v1.9.3_macos_arm64.tar.gz"
+      sha256 "df267c40cb876501d470f5b72dbb8629d10cdf4503c5da7be3b936d460dd4f51"
 
       def install
         bin.install "secrets"
@@ -29,24 +29,24 @@ class Secrets < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/secrets/releases/download/v1.9.2/secrets_v1.9.2_linux_x86_64.tar.gz"
-      sha256 "3dd1cad729b5a3c5b0d399b95df80c9f5d4fd3d305265b786632991efea98134"
+      url "https://github.com/umputun/secrets/releases/download/v1.9.3/secrets_v1.9.3_linux_x86_64.tar.gz"
+      sha256 "85b43ab2cd7452fa279c5121350ca5ed1e45ff8c8a647d0e5db8bfe4ead10594"
 
       def install
         bin.install "secrets"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/secrets/releases/download/v1.9.2/secrets_v1.9.2_linux_arm.tar.gz"
-      sha256 "0d55be1bdcecd15c75aa71dc4f4dbd4092a9913e0ab993f802d46b52d43e4a21"
+      url "https://github.com/umputun/secrets/releases/download/v1.9.3/secrets_v1.9.3_linux_arm.tar.gz"
+      sha256 "f7f5af3d55adc7fb90dbdf588014433d4ef7d14799fd3a215017803a83a939a7"
 
       def install
         bin.install "secrets"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/secrets/releases/download/v1.9.2/secrets_v1.9.2_linux_arm64.tar.gz"
-      sha256 "a7d56b4b0b113b6f82c4522f97b48d7df59f0604fefd907cb5a4238d9730907b"
+      url "https://github.com/umputun/secrets/releases/download/v1.9.3/secrets_v1.9.3_linux_arm64.tar.gz"
+      sha256 "a964080f780d274b21c2be426e76d9a7fc53b2703e56c9bffa7a3e888c64761c"
 
       def install
         bin.install "secrets"
