@@ -11,7 +11,7 @@ class TgSpam < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/umputun/tg-spam/releases/download/v1.23.3/tg-spam_v1.23.3_macos_x86_64.tar.gz"
-      sha256 "1e32f5275a9441b4e47fca65b9957ed218cabb2ff4d360b1c36188a85487690d"
+      sha256 "08500bf827bd5fe79d37fdfe4c93b0be69e380d960a63890f856bd6ad7a4904f"
 
       def install
         bin.install "tg-spam"
@@ -19,7 +19,7 @@ class TgSpam < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/umputun/tg-spam/releases/download/v1.23.3/tg-spam_v1.23.3_macos_arm64.tar.gz"
-      sha256 "b70d3a36538f96261a9d9aefe674d53dcd8ebcca52b5490b2e6c0fb0c8371b21"
+      sha256 "025a465f29673c38bdcd57e6c4e5542563e1ac3dc7621cdf95f9e5dec153813b"
 
       def install
         bin.install "tg-spam"
@@ -30,7 +30,7 @@ class TgSpam < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/umputun/tg-spam/releases/download/v1.23.3/tg-spam_v1.23.3_linux_x86_64.tar.gz"
-      sha256 "fa41c4edce2119086f44f73d26e1b3fad129a6e9d2557416c40add65f3a2982c"
+      sha256 "01657d6a99dd6fa75a7cf8a753d1e4fce048c1b0eb1ac282430014bdc6dac321"
 
       def install
         bin.install "tg-spam"
@@ -38,7 +38,7 @@ class TgSpam < Formula
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/umputun/tg-spam/releases/download/v1.23.3/tg-spam_v1.23.3_linux_arm.tar.gz"
-      sha256 "4e163a42e96361bc2449d287b314a2ec843f477e8b0f797e9f2e5f8f662c5af5"
+      sha256 "e403a430a3249f2b77239cbb247e1135f7dbd7f70b1a734b820a16220ac76407"
 
       def install
         bin.install "tg-spam"
@@ -46,7 +46,7 @@ class TgSpam < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/umputun/tg-spam/releases/download/v1.23.3/tg-spam_v1.23.3_linux_arm64.tar.gz"
-      sha256 "f7f943a91db9ea3bbdb8034f6a7072e4885124554ca3be025311dad61ab86cfa"
+      sha256 "70935eb1c740b4372efc689b712a9200c2979f0b230ddc1f89b64d2d275e2ff8"
 
       def install
         bin.install "tg-spam"
