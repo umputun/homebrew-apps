@@ -11,7 +11,7 @@ class Reproxy < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/umputun/reproxy/releases/download/v1.4.0/reproxy_v1.4.0_macos_amd64.tar.gz"
-      sha256 "e00813e8be240bd87d52d8587d40757d13cc0f7d148de1416e43b082b9898780"
+      sha256 "9ab3acf9c3e3bb3a5d3d84088257a824aa4c52e2b2476779b1cff430a963a3a1"
 
       def install
         bin.install "reproxy"
@@ -19,7 +19,7 @@ class Reproxy < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/umputun/reproxy/releases/download/v1.4.0/reproxy_v1.4.0_macos_arm64.tar.gz"
-      sha256 "d24d09f9fc57c8b1489b5518bd3ca204da8d47f6735ed2621de39694173fba96"
+      sha256 "c98ba67c59f52933357704af0907cd59d4424447b472d3f1cd5e5d628cd87531"
 
       def install
         bin.install "reproxy"
@@ -30,15 +30,7 @@ class Reproxy < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/umputun/reproxy/releases/download/v1.4.0/reproxy_v1.4.0_linux_amd64.tar.gz"
-      sha256 "bdac385e191871b631feb4712fc4b7e420fefaa98ac5273c4bc679d95aeb6fd7"
-
-      def install
-        bin.install "reproxy"
-      end
-    end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/reproxy/releases/download/v1.4.0/reproxy_v1.4.0_linux_arm.tar.gz"
-      sha256 "89d2523b83a94e073a5d6f8e10e91c6f28632a59d86f96a0539462f2a88dc752"
+      sha256 "4abab7aea7628e40a261091f5250a5fa5c1a0d5a9181158e2a94b0ae198b0132"
 
       def install
         bin.install "reproxy"
@@ -46,7 +38,7 @@ class Reproxy < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/umputun/reproxy/releases/download/v1.4.0/reproxy_v1.4.0_linux_arm64.tar.gz"
-      sha256 "75aa51e7640730a0d2ec15230a9292ddc2ab8f894bcd1ede57a740ae99a5635e"
+      sha256 "c288fa0d1ff6f24b8654f73ec8c2576d4f9ace972ba13111ded017193a5dea3f"
 
       def install
         bin.install "reproxy"
