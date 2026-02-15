@@ -5,21 +5,21 @@
 class Ralphex < Formula
   desc "Autonomous plan execution with Claude Code"
   homepage "https://github.com/umputun/ralphex"
-  version "0.12.0"
+  version "0.12.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/ralphex/releases/download/v0.12.0/ralphex_0.12.0_darwin_amd64.tar.gz"
-      sha256 "5f0b3c9d0549c69160a8841c3c4044a51302838f8a4fc2245d323582220094dd"
+      url "https://github.com/umputun/ralphex/releases/download/v0.12.1/ralphex_0.12.1_darwin_amd64.tar.gz"
+      sha256 "86ff382e706ba50714c741b3fc2726f94fe7f1f93be26ca21e850e2c5a887bd8"
 
       def install
         bin.install "ralphex"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/umputun/ralphex/releases/download/v0.12.0/ralphex_0.12.0_darwin_arm64.tar.gz"
-      sha256 "fa152d6957b0288a0de53bf13d91096cf477158e6568df46261e39471d11a92d"
+      url "https://github.com/umputun/ralphex/releases/download/v0.12.1/ralphex_0.12.1_darwin_arm64.tar.gz"
+      sha256 "a23a4a0dcbe399b06ce11002ac69716dfe200a64b78087386627bac37b205b70"
 
       def install
         bin.install "ralphex"
@@ -29,15 +29,15 @@ class Ralphex < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/ralphex/releases/download/v0.12.0/ralphex_0.12.0_linux_amd64.tar.gz"
-      sha256 "a7a2af9785cac483276e584719650c11b589d368b490a3fe97eb9d4cac1e3dab"
+      url "https://github.com/umputun/ralphex/releases/download/v0.12.1/ralphex_0.12.1_linux_amd64.tar.gz"
+      sha256 "a8751014f2999fdebe457d7375a34833913b46776c4029757a46a45777b52668"
       def install
         bin.install "ralphex"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/ralphex/releases/download/v0.12.0/ralphex_0.12.0_linux_arm64.tar.gz"
-      sha256 "71a12db341aa11f1686f98337a801bebfb6b1dcbb77c4dc0c5a4a904559ef7a1"
+      url "https://github.com/umputun/ralphex/releases/download/v0.12.1/ralphex_0.12.1_linux_arm64.tar.gz"
+      sha256 "089bd0fe6f8b9e80ddfb74eb44748c4fadac0d3512a746bffe0171870108b899"
       def install
         bin.install "ralphex"
       end
