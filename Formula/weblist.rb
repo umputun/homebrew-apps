@@ -5,51 +5,66 @@
 class Weblist < Formula
   desc "weblist is a self-hosted web service to access local files and folders"
   homepage "https://weblist.umputun.dev"
-  version "0.19.0"
+  version "0.19.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/weblist/releases/download/v0.19.0/weblist_v0.19.0_macos_x86_64.tar.gz"
-      sha256 "fae05a3b5c904f050993ceb047cd2fbada81e7f03f89b03fa9e820fc00f6b9ec"
+      url "https://github.com/umputun/weblist/releases/download/v0.19.1/weblist_v0.19.1_macos_x86_64.tar.gz"
+      sha256 "362bd42a4d367a5599ed6ef631c00b15e53862b2d734fdaae1f24fa4be407366"
 
       def install
         bin.install "weblist"
+        bash_completion.install "completions/weblist.bash" => "weblist"
+        zsh_completion.install "completions/weblist.zsh" => "_weblist"
+        fish_completion.install "completions/weblist.fish" => "weblist.fish"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/umputun/weblist/releases/download/v0.19.0/weblist_v0.19.0_macos_arm64.tar.gz"
-      sha256 "0025fac4168a8979c4c13d73ba9daf1702eaf099c474e5c7d37282e1025fb7b7"
+      url "https://github.com/umputun/weblist/releases/download/v0.19.1/weblist_v0.19.1_macos_arm64.tar.gz"
+      sha256 "11c4bfa53fb4058de49819419fb6ee42a6bc8b063a13fa8dd3ddbb92989a14be"
 
       def install
         bin.install "weblist"
+        bash_completion.install "completions/weblist.bash" => "weblist"
+        zsh_completion.install "completions/weblist.zsh" => "_weblist"
+        fish_completion.install "completions/weblist.fish" => "weblist.fish"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/weblist/releases/download/v0.19.0/weblist_v0.19.0_linux_x86_64.tar.gz"
-      sha256 "102f046f0b524b00f807029ab8b761fcea1a7b6066549f4663cc7f549673dfe9"
+      url "https://github.com/umputun/weblist/releases/download/v0.19.1/weblist_v0.19.1_linux_x86_64.tar.gz"
+      sha256 "19aea522723f54480a1d0c3b5d45f0f25d2baf7111813db83034919ecaa4c657"
 
       def install
         bin.install "weblist"
+        bash_completion.install "completions/weblist.bash" => "weblist"
+        zsh_completion.install "completions/weblist.zsh" => "_weblist"
+        fish_completion.install "completions/weblist.fish" => "weblist.fish"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/weblist/releases/download/v0.19.0/weblist_v0.19.0_linux_arm.tar.gz"
-      sha256 "ea295403e5878f7c885efbe940129136433be9bc0d831bdb38bb7fa86e30b2b9"
+      url "https://github.com/umputun/weblist/releases/download/v0.19.1/weblist_v0.19.1_linux_arm.tar.gz"
+      sha256 "04961bd2f69b4d222dc7b56d15d6232078da0f6dc7af028fee6f6d689cfd2dab"
 
       def install
         bin.install "weblist"
+        bash_completion.install "completions/weblist.bash" => "weblist"
+        zsh_completion.install "completions/weblist.zsh" => "_weblist"
+        fish_completion.install "completions/weblist.fish" => "weblist.fish"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/weblist/releases/download/v0.19.0/weblist_v0.19.0_linux_arm64.tar.gz"
-      sha256 "9b4b2c744e3d19eb6706ef09c47df1dcdf95c1de8763f5bd4176e73bfba4eb26"
+      url "https://github.com/umputun/weblist/releases/download/v0.19.1/weblist_v0.19.1_linux_arm64.tar.gz"
+      sha256 "9553ce75b3ac7502493ae3b8d59dc227c9204420c87b6fe3a3e02393d73de176"
 
       def install
         bin.install "weblist"
+        bash_completion.install "completions/weblist.bash" => "weblist"
+        zsh_completion.install "completions/weblist.zsh" => "_weblist"
+        fish_completion.install "completions/weblist.fish" => "weblist.fish"
       end
     end
   end
