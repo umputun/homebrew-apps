@@ -5,13 +5,13 @@
 class Ralphex < Formula
   desc "Autonomous plan execution with Claude Code"
   homepage "https://github.com/umputun/ralphex"
-  version "0.24.1"
+  version "0.24.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/ralphex/releases/download/v0.24.1/ralphex_0.24.1_darwin_amd64.tar.gz"
-      sha256 "d331174cfd51cb674e254597f03f1bbc2bc473f116f107a6c6491f7b766c4595"
+      url "https://github.com/umputun/ralphex/releases/download/v0.24.2/ralphex_0.24.2_darwin_amd64.tar.gz"
+      sha256 "fef3d05f9b3d6bf6396d56b7143bdd7c7bbcf880987571ad2064de0766009180"
 
       define_method(:install) do
         bin.install "ralphex"
@@ -21,8 +21,8 @@ class Ralphex < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/umputun/ralphex/releases/download/v0.24.1/ralphex_0.24.1_darwin_arm64.tar.gz"
-      sha256 "62f661c219d7856755e960fbfb78527d376b00968e540f06b7e3597e64543ec4"
+      url "https://github.com/umputun/ralphex/releases/download/v0.24.2/ralphex_0.24.2_darwin_arm64.tar.gz"
+      sha256 "7b8627a3bd149da745e83bd74a662234c62fe36921e429594ec10f7973fdd916"
 
       define_method(:install) do
         bin.install "ralphex"
@@ -35,8 +35,8 @@ class Ralphex < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/ralphex/releases/download/v0.24.1/ralphex_0.24.1_linux_amd64.tar.gz"
-      sha256 "972de13ae99367df59f55cf2327b136e23762235bbb32d971000164c3d01ac02"
+      url "https://github.com/umputun/ralphex/releases/download/v0.24.2/ralphex_0.24.2_linux_amd64.tar.gz"
+      sha256 "6dd5de269042d94ef43ebab16975755014358733e5772a35b142a247f0bc41ed"
       define_method(:install) do
         bin.install "ralphex"
         bash_completion.install "completions/ralphex.bash" => "ralphex"
@@ -45,8 +45,8 @@ class Ralphex < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/ralphex/releases/download/v0.24.1/ralphex_0.24.1_linux_arm64.tar.gz"
-      sha256 "ebfa57944d1249685a75b25440990dfeb2de7d04fec33e281a14fc8edab6f6d1"
+      url "https://github.com/umputun/ralphex/releases/download/v0.24.2/ralphex_0.24.2_linux_arm64.tar.gz"
+      sha256 "a0e25d5375aaeff41a3fd4ee3e0f772962051872b2086fcdaa6b2930b6eff61c"
       define_method(:install) do
         bin.install "ralphex"
         bash_completion.install "completions/ralphex.bash" => "ralphex"
