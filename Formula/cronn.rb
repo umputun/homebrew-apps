@@ -5,51 +5,66 @@
 class Cronn < Formula
   desc "Cronn is a crontab jobs scheduler with some nice extras. It allows to run commands on specified time intervals and can be used directly as well as from a container."
   homepage "https://cronn.umputun.dev"
-  version "1.12.3"
+  version "1.12.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/cronn/releases/download/v1.12.3/cronn_v1.12.3_macos_x86_64.tar.gz"
-      sha256 "ae182ac5c2b162801520e7a7afdaad23f1f7f449755ad4aa0dfbf3f9d4c6ba32"
+      url "https://github.com/umputun/cronn/releases/download/v1.12.4/cronn_v1.12.4_macos_x86_64.tar.gz"
+      sha256 "9cf786ff0c3b53477b95105aae88f953d812383af06ed756a4580f6ca77ed001"
 
       def install
         bin.install "cronn"
+        bash_completion.install "completions/cronn.bash" => "cronn"
+        zsh_completion.install "completions/cronn.zsh" => "_cronn"
+        fish_completion.install "completions/cronn.fish" => "cronn.fish"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/umputun/cronn/releases/download/v1.12.3/cronn_v1.12.3_macos_arm64.tar.gz"
-      sha256 "109859ff3561e313c71e5aa588c62116a9e679247ccafa09f08ec77660ec62ea"
+      url "https://github.com/umputun/cronn/releases/download/v1.12.4/cronn_v1.12.4_macos_arm64.tar.gz"
+      sha256 "c5a421fcc3d16363ccd24a2895aacc483bf69da9c316f60e6db9daf371bcd094"
 
       def install
         bin.install "cronn"
+        bash_completion.install "completions/cronn.bash" => "cronn"
+        zsh_completion.install "completions/cronn.zsh" => "_cronn"
+        fish_completion.install "completions/cronn.fish" => "cronn.fish"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/cronn/releases/download/v1.12.3/cronn_v1.12.3_linux_x86_64.tar.gz"
-      sha256 "34eb35b84e623bbfb70615aab8ca114c19d2a5992bbcfcffe744dfd07a10335c"
+      url "https://github.com/umputun/cronn/releases/download/v1.12.4/cronn_v1.12.4_linux_x86_64.tar.gz"
+      sha256 "2b9418da0ffd7588dedcea75ecfe7c01e23033f56a5405430c02612ef79af7fe"
 
       def install
         bin.install "cronn"
+        bash_completion.install "completions/cronn.bash" => "cronn"
+        zsh_completion.install "completions/cronn.zsh" => "_cronn"
+        fish_completion.install "completions/cronn.fish" => "cronn.fish"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/cronn/releases/download/v1.12.3/cronn_v1.12.3_linux_arm.tar.gz"
-      sha256 "723abff5a0caa66b7ec0255bbb043c16256c1c14f5c40efe30fff933fd826def"
+      url "https://github.com/umputun/cronn/releases/download/v1.12.4/cronn_v1.12.4_linux_arm.tar.gz"
+      sha256 "8b0dca61f1aaf62a998c2d08699fecca9a77073de67511cfe2d61a78363a630a"
 
       def install
         bin.install "cronn"
+        bash_completion.install "completions/cronn.bash" => "cronn"
+        zsh_completion.install "completions/cronn.zsh" => "_cronn"
+        fish_completion.install "completions/cronn.fish" => "cronn.fish"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/cronn/releases/download/v1.12.3/cronn_v1.12.3_linux_arm64.tar.gz"
-      sha256 "cbe82d6b56083937d0d00dda747e018d5f4d0dab2b086a69fc29d24f12cdf418"
+      url "https://github.com/umputun/cronn/releases/download/v1.12.4/cronn_v1.12.4_linux_arm64.tar.gz"
+      sha256 "f5b030b3a1ce1aa74851be896f945b53e24c47fd8317edd0144435671b71b4c9"
 
       def install
         bin.install "cronn"
+        bash_completion.install "completions/cronn.bash" => "cronn"
+        zsh_completion.install "completions/cronn.zsh" => "_cronn"
+        fish_completion.install "completions/cronn.fish" => "cronn.fish"
       end
     end
   end
