@@ -5,51 +5,66 @@
 class Secrets < Formula
   desc "Self-hosted service for sharing encrypted secrets with one-time access"
   homepage "https://github.com/umputun/secrets"
-  version "2.2.5"
+  version "2.2.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/secrets/releases/download/v2.2.5/secrets_v2.2.5_macos_x86_64.tar.gz"
-      sha256 "ba8eba4011befd163189b492f32a4d4da83d78f769a604d183d59cb61e09af48"
+      url "https://github.com/umputun/secrets/releases/download/v2.2.6/secrets_v2.2.6_macos_x86_64.tar.gz"
+      sha256 "1507dc4523fe20da6eab7f342b0cc1831714500aa994949add10d8e14ef52107"
 
       def install
         bin.install "secrets"
+        bash_completion.install "completions/secrets.bash" => "secrets"
+        zsh_completion.install "completions/secrets.zsh" => "_secrets"
+        fish_completion.install "completions/secrets.fish" => "secrets.fish"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/umputun/secrets/releases/download/v2.2.5/secrets_v2.2.5_macos_arm64.tar.gz"
-      sha256 "3e29d764e85b0c8c75b2075c6fd26ce694e103bbc96e49c30e4ceb8cab4d0567"
+      url "https://github.com/umputun/secrets/releases/download/v2.2.6/secrets_v2.2.6_macos_arm64.tar.gz"
+      sha256 "d255ddd133d821ceaaff73e7c658b492ac3072ac701540bde1a460a5c9a3121d"
 
       def install
         bin.install "secrets"
+        bash_completion.install "completions/secrets.bash" => "secrets"
+        zsh_completion.install "completions/secrets.zsh" => "_secrets"
+        fish_completion.install "completions/secrets.fish" => "secrets.fish"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/secrets/releases/download/v2.2.5/secrets_v2.2.5_linux_x86_64.tar.gz"
-      sha256 "a51e33c194565c18ef808824fb5667df1742abad25d45b4b565c51b44fb51117"
+      url "https://github.com/umputun/secrets/releases/download/v2.2.6/secrets_v2.2.6_linux_x86_64.tar.gz"
+      sha256 "404fb4ae401c298c6a1bc33c3087bf2698c08a95da40ddae45e91b1ea6ee8577"
 
       def install
         bin.install "secrets"
+        bash_completion.install "completions/secrets.bash" => "secrets"
+        zsh_completion.install "completions/secrets.zsh" => "_secrets"
+        fish_completion.install "completions/secrets.fish" => "secrets.fish"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/secrets/releases/download/v2.2.5/secrets_v2.2.5_linux_arm.tar.gz"
-      sha256 "01ea67ad35ded474897e6a230157856b687da0d9b0f87e680f2644e725fcf8bb"
+      url "https://github.com/umputun/secrets/releases/download/v2.2.6/secrets_v2.2.6_linux_arm.tar.gz"
+      sha256 "8a96b460952f11e783c1dd80b27316c6f2b0cf4e689503cd70abc2e1c7ab3503"
 
       def install
         bin.install "secrets"
+        bash_completion.install "completions/secrets.bash" => "secrets"
+        zsh_completion.install "completions/secrets.zsh" => "_secrets"
+        fish_completion.install "completions/secrets.fish" => "secrets.fish"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/secrets/releases/download/v2.2.5/secrets_v2.2.5_linux_arm64.tar.gz"
-      sha256 "290cbcf189e18da649224a598267de45c60ba592054814223a15e1dbd6347515"
+      url "https://github.com/umputun/secrets/releases/download/v2.2.6/secrets_v2.2.6_linux_arm64.tar.gz"
+      sha256 "9cef159cdb6b035f32f3e661b2648d1f2d62074f2897d7da07daa32cd878945c"
 
       def install
         bin.install "secrets"
+        bash_completion.install "completions/secrets.bash" => "secrets"
+        zsh_completion.install "completions/secrets.zsh" => "_secrets"
+        fish_completion.install "completions/secrets.fish" => "secrets.fish"
       end
     end
   end
