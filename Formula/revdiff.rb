@@ -5,21 +5,21 @@
 class Revdiff < Formula
   desc "TUI for reviewing diffs, files, and documents with inline annotations"
   homepage "https://github.com/umputun/revdiff"
-  version "0.14.0"
+  version "0.14.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/revdiff/releases/download/v0.14.0/revdiff_0.14.0_darwin_amd64.tar.gz"
-      sha256 "102c801a4bca0c0c5209378c32d91d53d931f63d88e90a17574e878931be20d2"
+      url "https://github.com/umputun/revdiff/releases/download/v0.14.1/revdiff_0.14.1_darwin_amd64.tar.gz"
+      sha256 "6af3770dc26605bcf7810b1bbafe09eb0d62f330a4937a8e54abe26260e4be1e"
 
       define_method(:install) do
         bin.install "revdiff"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/umputun/revdiff/releases/download/v0.14.0/revdiff_0.14.0_darwin_arm64.tar.gz"
-      sha256 "18f0b0eec92775a5adc347b0ad591f5affb86c34228608c692d0bdc670f85f16"
+      url "https://github.com/umputun/revdiff/releases/download/v0.14.1/revdiff_0.14.1_darwin_arm64.tar.gz"
+      sha256 "43f38eba29d2f73223662173ef64e02df5578b73a42278a0dcf4e7161a8cca3d"
 
       define_method(:install) do
         bin.install "revdiff"
@@ -29,15 +29,15 @@ class Revdiff < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/revdiff/releases/download/v0.14.0/revdiff_0.14.0_linux_amd64.tar.gz"
-      sha256 "25962f32d22e3333fb3588eceb372a2a44e8bd2f72fd1951bcf6cf068417084d"
+      url "https://github.com/umputun/revdiff/releases/download/v0.14.1/revdiff_0.14.1_linux_amd64.tar.gz"
+      sha256 "7367bc220cbd1f26455965dea488f311f152276004286333b28d3dc29188b550"
       define_method(:install) do
         bin.install "revdiff"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/revdiff/releases/download/v0.14.0/revdiff_0.14.0_linux_arm64.tar.gz"
-      sha256 "0f98413a062dd04434a5de37e92ded49bb7b0e26de12a073978345ae94f9a70a"
+      url "https://github.com/umputun/revdiff/releases/download/v0.14.1/revdiff_0.14.1_linux_arm64.tar.gz"
+      sha256 "de306b36e8b6d9d2b9f31d2b930580402c39c08d3d197985f97dd32dccef21f4"
       define_method(:install) do
         bin.install "revdiff"
       end
