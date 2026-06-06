@@ -5,21 +5,21 @@
 class Fya < Formula
   desc "Claude Code print-mode wrapper backed by an interactive PTY session"
   homepage "https://github.com/umputun/fya"
-  version "0.3.1"
+  version "0.3.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/fya/releases/download/v0.3.1/fya_0.3.1_darwin_amd64.tar.gz"
-      sha256 "782ee8b015cfc38b0b713c928887bee631e4ab6f8b829d6b18849ce8dd7cdc7a"
+      url "https://github.com/umputun/fya/releases/download/v0.3.2/fya_0.3.2_darwin_amd64.tar.gz"
+      sha256 "7bb5b6e0b72f308c256712438d2e41d02f2e0e641d08f51aeeb250c843e66fe3"
 
       define_method(:install) do
         bin.install "fya"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/umputun/fya/releases/download/v0.3.1/fya_0.3.1_darwin_arm64.tar.gz"
-      sha256 "9e9325c3c1bc7c6f17977cccd6debd8b9edd19d0aed90c5ee27602489745030f"
+      url "https://github.com/umputun/fya/releases/download/v0.3.2/fya_0.3.2_darwin_arm64.tar.gz"
+      sha256 "90412f13e5babe2d2294c1a0b32347fc5650c70fe0a8da6cf043f5b030c29490"
 
       define_method(:install) do
         bin.install "fya"
@@ -29,15 +29,15 @@ class Fya < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/fya/releases/download/v0.3.1/fya_0.3.1_linux_amd64.tar.gz"
-      sha256 "3d1650e355399578f82aac3892cfa7d7839c4af77992eee6b2b1b2c93b47e4ab"
+      url "https://github.com/umputun/fya/releases/download/v0.3.2/fya_0.3.2_linux_amd64.tar.gz"
+      sha256 "7591911f2e004d484f6a042830a179abf692a56b8ee180360ddffa58ac8e4482"
       define_method(:install) do
         bin.install "fya"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/fya/releases/download/v0.3.1/fya_0.3.1_linux_arm64.tar.gz"
-      sha256 "083628464f1f7145a084c5e22e669b202c60bb683c01de69d2c78dabeb318bd9"
+      url "https://github.com/umputun/fya/releases/download/v0.3.2/fya_0.3.2_linux_arm64.tar.gz"
+      sha256 "a0c6fe294de35b1bdeb32d10387146dda7993023375a7fab31d3cfff8e8db2ce"
       define_method(:install) do
         bin.install "fya"
       end
