@@ -10,7 +10,7 @@ cask "agterm" do
   desc "Native macOS terminal on libghostty with a workspace/session sidebar"
   homepage "https://github.com/umputun/agterm"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
   depends_on arch: :arm64
 
   app "agterm.app"
