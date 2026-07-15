@@ -5,15 +5,15 @@
 class Spot < Formula
   desc "Spot (aka spotctl) is a powerful and easy-to-use tool for effortless deployment and configuration management."
   homepage "https://spotctl.com/"
-  version "1.20.0"
+  version "1.20.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/spot/releases/download/v1.20.0/spot_v1.20.0_macos_x86_64.tar.gz"
-      sha256 "ed3329c87828d67ab3b58fda1910bca6f771c0d35a5cc23ae7eca1434136d415"
+      url "https://github.com/umputun/spot/releases/download/v1.20.1/spot_v1.20.1_macos_x86_64.tar.gz"
+      sha256 "6312977cef69c8dc28bbdf13f948d3465b817fef3aac45c9e47c49f89f668c2f"
 
-      def install
+      define_method(:install) do
         bin.install "spot"
         bin.install "spot-secrets"
         bash_completion.install "completions/spot.bash" => "spot"
@@ -25,10 +25,10 @@ class Spot < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/umputun/spot/releases/download/v1.20.0/spot_v1.20.0_macos_arm64.tar.gz"
-      sha256 "f441a7c556cff407b9e385717594a31083e24e49c9deb22629a5528655b94899"
+      url "https://github.com/umputun/spot/releases/download/v1.20.1/spot_v1.20.1_macos_arm64.tar.gz"
+      sha256 "249f09c41acb567bbae0c3caa9ff2e4449a10f91953fbc8b4b08127c70285ebf"
 
-      def install
+      define_method(:install) do
         bin.install "spot"
         bin.install "spot-secrets"
         bash_completion.install "completions/spot.bash" => "spot"
@@ -43,9 +43,9 @@ class Spot < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/spot/releases/download/v1.20.0/spot_v1.20.0_linux_x86_64.tar.gz"
-      sha256 "129eaff385fba885303bf74c1670ac55266ae46d98b1658f4c8e33a6f9dcce47"
-      def install
+      url "https://github.com/umputun/spot/releases/download/v1.20.1/spot_v1.20.1_linux_x86_64.tar.gz"
+      sha256 "5c57fa7e9ab8d402634b23c73d8c6a21207f1218a77f815b130c9d0380e6539e"
+      define_method(:install) do
         bin.install "spot"
         bin.install "spot-secrets"
         bash_completion.install "completions/spot.bash" => "spot"
@@ -57,9 +57,9 @@ class Spot < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/spot/releases/download/v1.20.0/spot_v1.20.0_linux_arm.tar.gz"
-      sha256 "c1d52283f9b7e5a7557105d560f701a8a7de0f0f7113104783c088cdabff45c0"
-      def install
+      url "https://github.com/umputun/spot/releases/download/v1.20.1/spot_v1.20.1_linux_arm.tar.gz"
+      sha256 "95b3077f9565c17fa06ff281bd8e826d5509d0f46c8ee6216723ef603093aa1b"
+      define_method(:install) do
         bin.install "spot"
         bin.install "spot-secrets"
         bash_completion.install "completions/spot.bash" => "spot"
@@ -71,9 +71,9 @@ class Spot < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/spot/releases/download/v1.20.0/spot_v1.20.0_linux_arm64.tar.gz"
-      sha256 "0241b46376d973a5048e61ef0044d4d8795176b6c8adfa3f8e437e5500c27e69"
-      def install
+      url "https://github.com/umputun/spot/releases/download/v1.20.1/spot_v1.20.1_linux_arm64.tar.gz"
+      sha256 "56085c7b5fd3c6efa27bc48c8e890d31856b8bb4cc951bcf01bd76c1c669d7d2"
+      define_method(:install) do
         bin.install "spot"
         bin.install "spot-secrets"
         bash_completion.install "completions/spot.bash" => "spot"
