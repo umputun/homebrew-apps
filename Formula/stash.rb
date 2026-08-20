@@ -5,51 +5,66 @@
 class Stash < Formula
   desc "Lightweight key-value configuration service for centralized config management"
   homepage "https://github.com/umputun/stash"
-  version "0.19.0"
+  version "0.20.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/stash/releases/download/v0.19.0/stash_v0.19.0_macos_x86_64.tar.gz"
-      sha256 "c9fdc6c97706ba453b0dedefc9a7944a3f8aaaa5568d29cc603fbbb1d1861a4f"
+      url "https://github.com/umputun/stash/releases/download/v0.20.0/stash_v0.20.0_macos_x86_64.tar.gz"
+      sha256 "fc94da1e8db15aaf5fdacfce2a316c4a753b8f4851aeb163612104fa7b70a655"
 
       def install
         bin.install "stash"
+        bash_completion.install "completions/stash.bash" => "stash"
+        zsh_completion.install "completions/stash.zsh" => "_stash"
+        fish_completion.install "completions/stash.fish" => "stash.fish"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/umputun/stash/releases/download/v0.19.0/stash_v0.19.0_macos_arm64.tar.gz"
-      sha256 "52125483344a991828dfd7beb060d7a63f6826a451792f5d6a954bb4b9e5fe73"
+      url "https://github.com/umputun/stash/releases/download/v0.20.0/stash_v0.20.0_macos_arm64.tar.gz"
+      sha256 "6560cc76215e23c0de3aa55fe5a8b799e94067e2a431a270b2681605c7642a0f"
 
       def install
         bin.install "stash"
+        bash_completion.install "completions/stash.bash" => "stash"
+        zsh_completion.install "completions/stash.zsh" => "_stash"
+        fish_completion.install "completions/stash.fish" => "stash.fish"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/stash/releases/download/v0.19.0/stash_v0.19.0_linux_x86_64.tar.gz"
-      sha256 "4120ebad1eb94e8fc6d65758d52979ebf772006f061f24168de34b0329d68deb"
+      url "https://github.com/umputun/stash/releases/download/v0.20.0/stash_v0.20.0_linux_x86_64.tar.gz"
+      sha256 "6352f5900720459b91d33b82d6d131dc2fb5b9dc4297e89db8367090e7aa6cb9"
 
       def install
         bin.install "stash"
+        bash_completion.install "completions/stash.bash" => "stash"
+        zsh_completion.install "completions/stash.zsh" => "_stash"
+        fish_completion.install "completions/stash.fish" => "stash.fish"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/stash/releases/download/v0.19.0/stash_v0.19.0_linux_arm.tar.gz"
-      sha256 "a06ea0b80f9fa09b948479e400de972b017958d61d9604016bf3569df9f57191"
+      url "https://github.com/umputun/stash/releases/download/v0.20.0/stash_v0.20.0_linux_arm.tar.gz"
+      sha256 "ca7edbb02418a8656e21cb182c5986e25029ed18edef5ff978a1d85b43e22837"
 
       def install
         bin.install "stash"
+        bash_completion.install "completions/stash.bash" => "stash"
+        zsh_completion.install "completions/stash.zsh" => "_stash"
+        fish_completion.install "completions/stash.fish" => "stash.fish"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/stash/releases/download/v0.19.0/stash_v0.19.0_linux_arm64.tar.gz"
-      sha256 "75c69e12ad508de771c34df0a80f06bb67a2abf6bd10dcb4a78aadaeb138129b"
+      url "https://github.com/umputun/stash/releases/download/v0.20.0/stash_v0.20.0_linux_arm64.tar.gz"
+      sha256 "905459be6f7fc9ec32bbc98a237d7df34eb6b33e39be23c7690ea0275bc8daa1"
 
       def install
         bin.install "stash"
+        bash_completion.install "completions/stash.bash" => "stash"
+        zsh_completion.install "completions/stash.zsh" => "_stash"
+        fish_completion.install "completions/stash.fish" => "stash.fish"
       end
     end
   end
