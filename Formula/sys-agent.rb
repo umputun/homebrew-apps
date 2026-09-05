@@ -5,13 +5,13 @@
 class SysAgent < Formula
   desc "SysAgent is a simple service reporting server status via HTTP GET request. It is useful for monitoring and debugging purposes, but usually used as a part of some other monitoring system collecting data and serving it."
   homepage "https://sys-agent.umputun.dev"
-  version "1.7.1"
+  version "1.7.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/sys-agent/releases/download/v1.7.1/sys-agent_v1.7.1_macos_x86_64.tar.gz"
-      sha256 "72941ed8f1b70e00822f4d9f4c329ccec168fba358f98d060dd958d2bfd428f0"
+      url "https://github.com/umputun/sys-agent/releases/download/v1.7.2/sys-agent_v1.7.2_macos_x86_64.tar.gz"
+      sha256 "e37ba9a9c0d1117564c27e50bad7d661aa8af6adee59127e5dd8210176ce88f9"
 
       def install
         bin.install "sys-agent"
@@ -21,8 +21,8 @@ class SysAgent < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/umputun/sys-agent/releases/download/v1.7.1/sys-agent_v1.7.1_macos_arm64.tar.gz"
-      sha256 "e5933d2f8bef0b4489d2d3e3db3a37738d219d636c912c5ea283d63a903517fe"
+      url "https://github.com/umputun/sys-agent/releases/download/v1.7.2/sys-agent_v1.7.2_macos_arm64.tar.gz"
+      sha256 "42654293d1dd0555e6bf513d69c0968f49bd507313d9f35ef1b3d6e470614792"
 
       def install
         bin.install "sys-agent"
@@ -35,8 +35,8 @@ class SysAgent < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/sys-agent/releases/download/v1.7.1/sys-agent_v1.7.1_linux_x86_64.tar.gz"
-      sha256 "fac61330e2dde25210706284279fc9314ff5ee0855de6d484ad268743eaa517b"
+      url "https://github.com/umputun/sys-agent/releases/download/v1.7.2/sys-agent_v1.7.2_linux_x86_64.tar.gz"
+      sha256 "885c3a610aea665db6047f17ac6d706ce3b37cec4a8c3a58e47b7dd58f1f2e0e"
 
       def install
         bin.install "sys-agent"
@@ -46,8 +46,8 @@ class SysAgent < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/sys-agent/releases/download/v1.7.1/sys-agent_v1.7.1_linux_arm.tar.gz"
-      sha256 "9418ac927ec1e79303f41d69190bbbcafd3ff1327d67620b64c1cb11e46ddbc4"
+      url "https://github.com/umputun/sys-agent/releases/download/v1.7.2/sys-agent_v1.7.2_linux_arm.tar.gz"
+      sha256 "e69afc7acc034364a78f76a96e7f0398b7c25b7eefc20732e03712294819f044"
 
       def install
         bin.install "sys-agent"
@@ -57,8 +57,8 @@ class SysAgent < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/sys-agent/releases/download/v1.7.1/sys-agent_v1.7.1_linux_arm64.tar.gz"
-      sha256 "e95eabe31b0cb5ca1db1b35be79615f2e59d6253274f6172f3ef6f5de9acb772"
+      url "https://github.com/umputun/sys-agent/releases/download/v1.7.2/sys-agent_v1.7.2_linux_arm64.tar.gz"
+      sha256 "6ba272a72f6d53a57ee16e98671cc65ed1cf2dbb72a729182966060a7e9557e5"
 
       def install
         bin.install "sys-agent"
