@@ -7,7 +7,7 @@ cask "agterm" do
 
   url "https://github.com/umputun/agterm/releases/download/v#{version}/agterm-#{version}.dmg"
   name "agterm"
-  desc "Native macOS terminal on libghostty with a workspace/session sidebar"
+  desc "Terminal on libghostty with a workspace/session sidebar"
   homepage "https://github.com/umputun/agterm"
 
   depends_on macos: :sonoma
