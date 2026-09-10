@@ -5,26 +5,34 @@ added: 2026-09-06
 ---
 # revmux goreleaser hook regenerates the deprecated postflight stanza
 
-PR #5 moved Casks/revmux.rb to `postflight_steps`, but the file is GoReleaser output. The stanza comes
-from `homebrew_casks[].hooks.post.install` in umputun/revmux `.goreleaser.yml`, which GoReleaser wraps in
-`postflight do`. The next revmux release rewrites the deprecated block and brew warns again on every
-revmux install or upgrade.
+PR #5 moved Casks/revmux.rb to `postflight_steps`, but the file is GoReleaser output, and the v0.2.2
+release put the deprecated block back exactly as predicted. Casks/revmux.rb here is hand-fixed again so
+brew stops warning on install and upgrade today.
 
-GoReleaser cannot translate the Ruby body, so upgrading alone does not fix it. Upstream PR
-goreleaser/goreleaser#6873 (issue 6870) adds `hooks.post.install_steps` and a `{{ .StagedPath }}`
-template field that expands to `{{staged_path}}`; the legacy `install` hook keeps emitting `postflight`.
-Once a GoReleaser release contains that change, switch the revmux config to:
+The recurrence is fixed at the source. umputun/revmux `.goreleaser.yml` no longer uses
+`homebrew_casks[].hooks.post.install`, which GoReleaser always wraps in `postflight do`; the stanza is
+now a `custom_block`, which GoReleaser copies into the cask verbatim:
 
 ```yaml
-hooks:
-  post:
-    install_steps: |
-      on_macos do
-        run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{ .StagedPath }}/revmux"]
-      end
+custom_block: |
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr",
+          args: ["-dr", "com.apple.quarantine", "{{ `{{staged_path}}` }}/revmux"]
+    end
+  end
 ```
 
-Done when a revmux release regenerates Casks/revmux.rb here with `postflight_steps` intact.
+Verified by snapshot render plus a real `brew install` of a probe cask carrying that output: no
+deprecation warning, `com.apple.quarantine` stripped, binary runs. The one cost is placement —
+`custom_block` is emitted right after `cask "revmux" do`, before `version`, so `brew style` reports
+Cask/StanzaOrder offenses. Cosmetic, and nothing in the release pipeline audits the file.
+
+Upstream GoReleaser PR 6873 (issue 6870) adds a proper `hooks.post.install_steps` and a
+`{{ .StagedPath }}` template field. It is still open with no milestone. Switching to it once it ships
+would fix the stanza order too, but is not needed for the warning.
+
+Done when revmux v0.2.3 regenerates Casks/revmux.rb here with `postflight_steps` intact.
 
 The agterm cask is not exposed: agterm's release script edits only version and sha256 in place. Its
 packaging/agterm.rb seed still has the old `postflight` and description, which matters only if the tap
