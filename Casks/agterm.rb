@@ -2,8 +2,8 @@
 # umputun/homebrew-apps (Casks/agterm.rb) on first publish and rewrites the
 # version + sha256 lines on every release.
 cask "agterm" do
-  version "0.33.0"
-  sha256 "5e28e783d865a19590d48b871dea8a2ca5d15c2d6ecfa6685e79ae065d410daa"
+  version "0.33.1"
+  sha256 "a03ee6a83b87abe7f97b9042b561a2b3a905813993c6e2989a2d35436fc08af0"
 
   url "https://github.com/umputun/agterm/releases/download/v#{version}/agterm-#{version}.dmg"
   name "agterm"
