@@ -5,13 +5,13 @@
 class Cronn < Formula
   desc "Cronn is a crontab jobs scheduler with some nice extras. It allows to run commands on specified time intervals and can be used directly as well as from a container."
   homepage "https://cronn.umputun.dev"
-  version "1.15.2"
+  version "1.15.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/cronn/releases/download/v1.15.2/cronn_v1.15.2_macos_x86_64.tar.gz"
-      sha256 "8787b2b8b0b652487d4f2d0df62b3ee6da2ac8528d1cf1c904a7b9fb8eceb6c4"
+      url "https://github.com/umputun/cronn/releases/download/v1.15.3/cronn_v1.15.3_macos_x86_64.tar.gz"
+      sha256 "14b8a9a7ff403627f2f58d862493f6ffc84b67ff7e7fcf91be176b2d3a9100d6"
 
       def install
         bin.install "cronn"
@@ -21,8 +21,8 @@ class Cronn < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/umputun/cronn/releases/download/v1.15.2/cronn_v1.15.2_macos_arm64.tar.gz"
-      sha256 "0bd13bd8c9f821499c6bff35c3a237554e599522ad40766424a7ec169706b551"
+      url "https://github.com/umputun/cronn/releases/download/v1.15.3/cronn_v1.15.3_macos_arm64.tar.gz"
+      sha256 "feb5f22e70c856af4f469f2226bb636a43cfb43cb932849be579185501e44e2d"
 
       def install
         bin.install "cronn"
@@ -35,8 +35,8 @@ class Cronn < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/cronn/releases/download/v1.15.2/cronn_v1.15.2_linux_x86_64.tar.gz"
-      sha256 "00e088f41cdcaa335cfd2f0b6e7ab27a9fa1e86ca0ee0ee9be238162b523b82e"
+      url "https://github.com/umputun/cronn/releases/download/v1.15.3/cronn_v1.15.3_linux_x86_64.tar.gz"
+      sha256 "26b7bcf857043bd1b519cc6c96e1d6202e8b7dc80f19f7b6f451602db416557a"
 
       def install
         bin.install "cronn"
@@ -46,8 +46,8 @@ class Cronn < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/cronn/releases/download/v1.15.2/cronn_v1.15.2_linux_arm.tar.gz"
-      sha256 "f9b4dbecc83489019b82d8f800755007b4165ae4ed817221c733299f570104c6"
+      url "https://github.com/umputun/cronn/releases/download/v1.15.3/cronn_v1.15.3_linux_arm.tar.gz"
+      sha256 "fd1b2c8043069985bc87e6c846408738113d2c84b3681f76ddcb5e118e7d80ed"
 
       def install
         bin.install "cronn"
@@ -57,8 +57,8 @@ class Cronn < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/cronn/releases/download/v1.15.2/cronn_v1.15.2_linux_arm64.tar.gz"
-      sha256 "281da73fbfed407918253e91d9b178d2232827d8575aa16a3b579856518fb083"
+      url "https://github.com/umputun/cronn/releases/download/v1.15.3/cronn_v1.15.3_linux_arm64.tar.gz"
+      sha256 "b65b24d3e51ec7e800b9b37d902ec759ff5353db18898882b24b4ba02b7a5a7c"
 
       def install
         bin.install "cronn"
