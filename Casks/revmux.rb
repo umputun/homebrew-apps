@@ -7,25 +7,25 @@ cask "revmux" do
     end
   end
 
-  version "0.2.6"
+  version "0.2.7"
 
   on_macos do
     on_arm do
-      sha256 "647b63c8044d2ca6026ad47fa8b7bcbde3376412f5eb232d2d30aee8e040b2de"
+      sha256 "2d732157d4bdc7692e4468a76fc6ed00abc558e6212e0b1b6c06cd2937722faf"
       url "https://github.com/umputun/revmux/releases/download/v#{version}/revmux_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "d19b46208bbc52a147092f8fd929b0eeae0d32d77fcf9cb275689c7634fa8560"
+      sha256 "0583add3e3f1d55b5770763f880990a230a63e8d8bb56a9498fd2a87fd8982f5"
       url "https://github.com/umputun/revmux/releases/download/v#{version}/revmux_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "b74d3a776780d91ba558854b7305ba8ca613ef405b65aabca301de30805ff2f0"
+      sha256 "1d6d7e708f96b6e9c5123efc303c358401d43e321f3703092c60a072983eff35"
       url "https://github.com/umputun/revmux/releases/download/v#{version}/revmux_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "d36343139b4e4c8382dd3cd3d7af2c5145e4422c3c51b670ac09fa5a10e03218"
+      sha256 "efb69bbd7a2da7efdb7eeb399788476d6ab8925358cd51a90dc5935a726ec90d"
       url "https://github.com/umputun/revmux/releases/download/v#{version}/revmux_#{version}_linux_amd64.tar.gz"
     end
   end
