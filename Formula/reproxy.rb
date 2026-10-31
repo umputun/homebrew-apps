@@ -5,13 +5,13 @@
 class Reproxy < Formula
   desc "Simple edge HTTP(s) reverse proxy with automatic SSL"
   homepage "https://reproxy.io"
-  version "1.7.2"
+  version "1.7.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/reproxy/releases/download/v1.7.2/reproxy_v1.7.2_macos_amd64.tar.gz"
-      sha256 "3c6e7e634d9a7d66de41f13b80488268c6d8302ed58cf5d419153b64c7939e4f"
+      url "https://github.com/umputun/reproxy/releases/download/v1.7.3/reproxy_v1.7.3_macos_amd64.tar.gz"
+      sha256 "41a023cd00b6acceae4f8e1a58b8c9ad9c9d1d17f56e63fb7fcae7c4b34ea405"
 
       def install
         bin.install "reproxy"
@@ -21,8 +21,8 @@ class Reproxy < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/umputun/reproxy/releases/download/v1.7.2/reproxy_v1.7.2_macos_arm64.tar.gz"
-      sha256 "cec0936b57ca39bfa21010dff0443411bb42d4e3e8527daa89d7f232ed6bfc51"
+      url "https://github.com/umputun/reproxy/releases/download/v1.7.3/reproxy_v1.7.3_macos_arm64.tar.gz"
+      sha256 "24b794c42221e3641cabf5e3ca8f6e97cdea2a8c3221d88bf70ac843028764c9"
 
       def install
         bin.install "reproxy"
@@ -35,8 +35,8 @@ class Reproxy < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/reproxy/releases/download/v1.7.2/reproxy_v1.7.2_linux_amd64.tar.gz"
-      sha256 "bb786c6c92619b50b468a1d156e142d177760395b65b46938f78799058edfcab"
+      url "https://github.com/umputun/reproxy/releases/download/v1.7.3/reproxy_v1.7.3_linux_amd64.tar.gz"
+      sha256 "ab01cde73bb5bfd726b785b055dd93d3b24dc9a14b6e32676e21fa6796c9c3a6"
 
       def install
         bin.install "reproxy"
@@ -46,8 +46,8 @@ class Reproxy < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/reproxy/releases/download/v1.7.2/reproxy_v1.7.2_linux_arm64.tar.gz"
-      sha256 "d34e30066611d80e12893d516b8c8fb09b0a16827da1683f297884a823e91442"
+      url "https://github.com/umputun/reproxy/releases/download/v1.7.3/reproxy_v1.7.3_linux_arm64.tar.gz"
+      sha256 "5f2fd89acffe3b0146cf92f0d05eef419fccccf2e2ff9d72fde5034fac04ca45"
 
       def install
         bin.install "reproxy"
