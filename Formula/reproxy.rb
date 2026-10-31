@@ -5,13 +5,13 @@
 class Reproxy < Formula
   desc "Simple edge HTTP(s) reverse proxy with automatic SSL"
   homepage "https://reproxy.io"
-  version "1.7.4"
+  version "1.7.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/umputun/reproxy/releases/download/v1.7.4/reproxy_v1.7.4_macos_amd64.tar.gz"
-      sha256 "06b67f58980216f8ac0191a400a107d98cddfcebe2a9f063b364919203193f1a"
+      url "https://github.com/umputun/reproxy/releases/download/v1.7.5/reproxy_v1.7.5_macos_amd64.tar.gz"
+      sha256 "12e56bb1e5099f23d87270efd5fe49e427b798d82e1d0bae25e69216825217aa"
 
       define_method(:install) do
         bin.install "reproxy"
@@ -21,8 +21,8 @@ class Reproxy < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/umputun/reproxy/releases/download/v1.7.4/reproxy_v1.7.4_macos_arm64.tar.gz"
-      sha256 "6a3f462d214f98b6883b52b83719624273cc86679377218446ea926af62d1d4b"
+      url "https://github.com/umputun/reproxy/releases/download/v1.7.5/reproxy_v1.7.5_macos_arm64.tar.gz"
+      sha256 "1275fe5fd485f25cd62fe8a2c5aaa26e0c5a35a1e80fae2b17eafa5083fbe1b3"
 
       define_method(:install) do
         bin.install "reproxy"
@@ -35,8 +35,8 @@ class Reproxy < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/reproxy/releases/download/v1.7.4/reproxy_v1.7.4_linux_amd64.tar.gz"
-      sha256 "0231b2927272227d1c6aed79d988f3bdd0c56939d4fc06bc3dbc02ae8781d3f8"
+      url "https://github.com/umputun/reproxy/releases/download/v1.7.5/reproxy_v1.7.5_linux_amd64.tar.gz"
+      sha256 "4c394e653c0fbc238923b2fa9ae5461385240d4a2e402d6ecdda98ffa817e401"
       define_method(:install) do
         bin.install "reproxy"
         bash_completion.install "completions/reproxy.bash" => "reproxy"
@@ -45,8 +45,8 @@ class Reproxy < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/umputun/reproxy/releases/download/v1.7.4/reproxy_v1.7.4_linux_arm64.tar.gz"
-      sha256 "f53e7219ea6eddf4d5d715206b402cf82e4fba58f8a9771cba23023275d4bc7d"
+      url "https://github.com/umputun/reproxy/releases/download/v1.7.5/reproxy_v1.7.5_linux_arm64.tar.gz"
+      sha256 "af971cc69e8f52378fdf9e66a55a6138fbbf10da87ba4c9b03dcb4122f63c77d"
       define_method(:install) do
         bin.install "reproxy"
         bash_completion.install "completions/reproxy.bash" => "reproxy"
